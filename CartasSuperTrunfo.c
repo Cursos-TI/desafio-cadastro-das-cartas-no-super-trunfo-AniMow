@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <string.h>
 
 // Desafio Super Trunfo - Países
 // Tema 1 - Cadastro das Cartas
@@ -29,50 +30,60 @@ int main () {
 
     printf("Digite a letra do primeiro Estado: ");
     scanf(" %c", &estado1);
+    getchar();
 
     printf("Digite o Codigo da primeira carta: ");
-    scanf(" %4s", &cod_carta1);
+    scanf("%4s", cod_carta1);
+    getchar();
 
     printf("Digite o Nome da primeira cidade: ");
-    scanf("%s", nome_cidade1);
-    //fgets(nome_cidade1, sizeof(nome_cidade1), stdin);
+    fgets(nome_cidade1, sizeof(nome_cidade1), stdin);
 
     printf("Digite o numero da primeira Populacao: ");
     scanf("%d", &populacao1);
+    getchar();
 
     printf("Digite a Area da primeira cidade: ");
-    scanf("%.2f", &area_km1);
+    scanf("%f", &area_km1);
+    getchar();
 
     printf("Digite o PIB da primeira cidade: ");
-    scanf("%.2f", &pib1);
+    scanf("%f", &pib1);
+    getchar();
 
     printf("Digite o numero de Pontos turisticos na primeira cidade: ");
     scanf("%d", &num_ptur1);
+    getchar();
 
     //Cidade 2:
-    printf("Insira as informacoes da segunda carta de cidade. ");
+    printf("Insira as informacoes da segunda carta de cidade. \n");
     
     printf("Digite a letra do segundo Estado: ");
     scanf(" %c", &estado2);
+    getchar();
 
     printf("Digite o Codigo da segunda carta: ");
-    scanf("%4s", &cod_carta2);
+    scanf("%4s", cod_carta2);
+    getchar();
 
     printf("Digite o Nome da segunda cidade: ");
-    scanf("%s", nome_cidade1);
-    //fgets(nome_cidade2, sizeof(nome_cidade2), stdin);
+    fgets(nome_cidade2, sizeof(nome_cidade2), stdin);
 
     printf("Digite o numero da segunda Populacao: ");
     scanf("%d", &populacao2);
+    getchar();
 
     printf("Digite a Area da segunda cidade: ");
-    scanf("%.2f", &area_km2);
+    scanf("%f", &area_km2);
+    getchar();
 
     printf("Digite o PIB da segunda cidade: ");
-    scanf("%.2f", &pib2);
+    scanf("%f", &pib2);
+    getchar();
 
     printf("Digite o numero de Pontos turisticos na segunda cidade: ");
     scanf("%d", &num_ptur2);
+    getchar();
 
     // Exibição dos Dados das Cartas:
     // Sugestão: Utilize a função printf para exibir as informações das cartas cadastradas de forma clara e organizada.
@@ -80,11 +91,11 @@ int main () {
 
     //Mostrar os valores das Cartas das cidade, de forma individual
     
-    printf("\nCarta 1: \nEstado: %c \nCodigo: %s \nNome da cidade: %s \nPopulacao: %d \n", estado1, cod_carta1, nome_cidade1, populacao1);
-    printf("Area: %f \nPIB: %f \nNumero de pontos turisticos: %d\n", area_km1, pib1, num_ptur1);
+    printf("\nCarta 1: \nEstado: %c \nCodigo: %s \nNome da cidade: %sPopulacao: %d \n", estado1, cod_carta1, nome_cidade1, populacao1);
+    printf("Area: %.2f \nPIB: %.2f \nNumero de pontos turisticos: %d\n", area_km1, pib1, num_ptur1);
 
-    printf("\nCarta 2: \nEstado: %c \nCodigo: %s \nNome da cidade: %s \nPopulacao: %d \n", estado2, cod_carta2, nome_cidade2, populacao2);
-    printf("Area: %f \nPIB: %f \nNumero de pontos turisticos: %d\n", area_km2, pib2, num_ptur2);
+    printf("\nCarta 2: \nEstado: %c \nCodigo: %s \nNome da cidade: %sPopulacao: %d \n", estado2, cod_carta2, nome_cidade2, populacao2);
+    printf("Area: %.2f \nPIB: %.2f \nNumero de pontos turisticos: %d\n", area_km2, pib2, num_ptur2);
 
     return 0;
 
