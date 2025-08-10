@@ -38,6 +38,7 @@ int main () {
 
     printf("Digite o Nome da primeira cidade: ");
     fgets(nome_cidade1, sizeof(nome_cidade1), stdin);
+    nome_cidade1[strcspn(nome_cidade1, "\n")] = '\0';
 
     printf("Digite o numero da primeira Populacao: ");
     scanf("%d", &populacao1);
@@ -68,6 +69,7 @@ int main () {
 
     printf("Digite o Nome da segunda cidade: ");
     fgets(nome_cidade2, sizeof(nome_cidade2), stdin);
+    nome_cidade2[strcspn(nome_cidade2, "\n")] = '\0';
 
     printf("Digite o numero da segunda Populacao: ");
     scanf("%d", &populacao2);
@@ -91,10 +93,10 @@ int main () {
 
     //Mostrar os valores das Cartas das cidade, de forma individual
     
-    printf("\nCarta 1: \nEstado: %c \nCodigo: %s \nNome da cidade: %sPopulacao: %d \n", estado1, cod_carta1, nome_cidade1, populacao1);
+    printf("\nCarta 1: \nEstado: %c \nCodigo: %s \nNome da cidade: %s \nPopulacao: %d \n", estado1, cod_carta1, nome_cidade1, populacao1);
     printf("Area: %.2f \nPIB: %.2f \nNumero de pontos turisticos: %d\n", area_km1, pib1, num_ptur1);
 
-    printf("\nCarta 2: \nEstado: %c \nCodigo: %s \nNome da cidade: %sPopulacao: %d \n", estado2, cod_carta2, nome_cidade2, populacao2);
+    printf("\nCarta 2: \nEstado: %c \nCodigo: %s \nNome da cidade: %s \nPopulacao: %d \n", estado2, cod_carta2, nome_cidade2, populacao2);
     printf("Area: %.2f \nPIB: %.2f \nNumero de pontos turisticos: %d\n", area_km2, pib2, num_ptur2);
 
     return 0;
